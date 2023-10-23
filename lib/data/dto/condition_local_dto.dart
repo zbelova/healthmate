@@ -11,7 +11,7 @@ class ConditionLocalDto extends HiveObject {
   @HiveField(2)
   final List<String> symptoms;
   @HiveField(3)
-  final int entryKey;
+  final String entryKey;
 
   ConditionLocalDto({
     required this.name,

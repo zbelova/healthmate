@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'package:image_picker/image_picker.dart';
 
 import 'condtion_model.dart';
 
@@ -6,7 +6,7 @@ class Entry {
   final List<Condition> conditions;
   final DateTime date;
   final String key;
-  final List<File> files;
+  final List<XFile> files;
   final List<String> medications;
 
   Entry({

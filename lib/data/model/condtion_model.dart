@@ -2,7 +2,7 @@ class Condition {
   final String name;
   final int level;
   final List<String> symptoms;
-  final int entryKey;
+  final String entryKey;
 
   Condition({
     required this.name,
