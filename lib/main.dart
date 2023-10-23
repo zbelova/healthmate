@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:healthmate/presentation/navigation_bar.dart';
 import 'package:hive/hive.dart';
 
 import 'data/dto/condition_local_dto.dart';
 import 'data/dto/entry_local_dto.dart';
+import 'data/healthmate_local_datasource.dart';
+import 'data/healthmate_repository.dart';
 import 'data/user_preferences.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,6 +20,9 @@ void main() async {
     ..init(directory.path)
     ..registerAdapter(EntryLocalDtoAdapter())
     ..registerAdapter(ConditionLocalDtoAdapter());
+
+  GetIt.I.registerSingleton(HealthMateLocalDatasource());
+  GetIt.I.registerSingleton(HealthMateRepository(GetIt.I.get()));
 
   runApp(const ProviderScope(child: Healthmate()));
 }
