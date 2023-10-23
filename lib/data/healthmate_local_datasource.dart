@@ -26,15 +26,11 @@ class HealthMateLocalDatasource {
     await box.add(condition);
   }
 
-  Future<List<Entry>> getEntry() async {
+  Future<Entry> getEntry(String key) async {
     final box = await _entriesBox;
-    final List<EntryLocalDto> values = box.isNotEmpty ? box.values.toList() : [];
-    final List<Entry> entries = [];
-    for (final entry in values) {
-      final conditions = await getConditions(entry.key);
-      entries.add(Entry(conditions: conditions, date: entry.date, key: entry.key, files: entry.filePaths.map((e) => XFile(e)).toList(), medications: entry.medications));
-    }
-    return entries;
+    final EntryLocalDto entry = box.values.firstWhere((element) => element.key == key);
+    final conditions = await getConditions(key);
+    return Entry(conditions: conditions, date: entry.date, key: entry.key, files: entry.filePaths.map((e) => XFile(e)).toList(), medications: entry.medications);
   }
 
   Future<List<Condition>> getConditions(String key) {
