@@ -17,16 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
           body: Container(
             color: const Color(0xFF94DAFF),
-            // decoration: BoxDecoration(
-            //   gradient: LinearGradient(
-            //     colors: [
-            //       Color(0xFF34599B),
-            //       Color(0xFF0B142A),
-            //     ],
-            //     begin: Alignment.topCenter,
-            //     end: Alignment.bottomCenter,
-            //   ),
-            // ),
 
             child: ListView.builder(
               itemCount: 7,
@@ -38,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                         decoration: const BoxDecoration(
-                          color: Color(0xFF3880CE),
+                          color: Color(0xFF40A1F3),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
@@ -54,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     Container(
                       color: index < 3 || index == 6
-                          ? const Color(0xFF3880CE)
+                          ? const Color(0xFF40A1F3)
                           : index == 3
                               ? const Color(0xFFFFA441)
                               : const Color(0xFFFA5495),
@@ -172,6 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ],
                                   ),
+
                                 ],
                               ),
                             if (index > 3 && index < 6)
@@ -213,64 +204,150 @@ class _HomeScreenState extends State<HomeScreen> {
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  Wrap(
-                                    children: [
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5, bottom: 5),
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFFFB6C1),
-                                          borderRadius: BorderRadius.circular(10),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 5),
+                                    child: Wrap(
+                                      children: [
+                                        Container(
+                                          margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFFFB6C1),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: const Text(
+                                            'Бессоница',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                          ),
                                         ),
-                                        child: const Text(
-                                          'Бессоница',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                        Container(
+                                          margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFFFB6C1),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: const Text(
+                                            'Импульсивные покупки',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                          ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5, bottom: 5),
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFFFB6C1),
-                                          borderRadius: BorderRadius.circular(10),
+                                        Container(
+                                          margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFFFB6C1),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: const Text(
+                                            'Неусидчивость',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                          ),
                                         ),
-                                        child: const Text(
-                                          'Импульсивные покупки',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                        Container(
+                                          margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFFFB6C1),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: const Text(
+                                            'Веселость',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
+                                          ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5, bottom: 5),
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFFFB6C1),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        child: const Text(
-                                          'Неусидчивость',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5, bottom: 5),
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFFFB6C1),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        child: const Text(
-                                          'Веселость',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(fontSize: 14, color: Color(0xFFF10E5D), fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
+                            if (index > 3 && index < 6) Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFFF7619),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Text(
+                                        'Мигрень',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 14, color: Color(0xFFFFFFFF), fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFFF7619),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Text(
+                                        '4',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 16, color: Color(0xFFFFFFFF), fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Wrap(
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFFFDBAD),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Text(
+                                        'Тошнота',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 14, color: Color(0xFFA1431B), fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFFFDBAD),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Text(
+                                        'Боль в висках',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 14, color: Color(0xFFA1431B), fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(right: 5, bottom: 5),
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFFFDBAD),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: const Text(
+                                        'Головокружение',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(fontSize: 14, color: Color(0xFFA1431B), fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                             if (index == 6)
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
